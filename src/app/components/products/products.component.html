@@ -1,0 +1,32 @@
+<br><br><br><br><br>
+
+<!-- <div class="products--grid">
+  <app-product
+    [product]="product"
+    (addedProduct)="onAddToShoppingCart($event)"
+    *ngFor="let product of products"
+  ></app-product>
+</div> -->
+
+<button (click)="createNewProduct()">create</button>
+<button (click)="onshowProduct('124215')">Detalle not found</button>
+<div class="products--grid">
+  <app-product
+  (showProduct)="onshowProduct($event)"
+    [product]="product"
+    *ngFor="let product of products"
+  ></app-product>
+
+  <button (click)="loadMore()">Load More</button>
+</div>
+
+<div class="product-detail" [class.active]="showProductDetail">
+  <div *ngIf="productChosen">
+    <button (click)="toggleProductDetail()" >Close</button>
+
+      <h1>{{productChosen.title}}</h1>
+      <app-swiper [productChosen]="productChosen" ></app-swiper>
+      <button (click)="updateProduct()">Editar</button>
+      <button (click)="deleteProduct()">Delete</button>
+  </div>
+</div>

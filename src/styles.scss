@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import '~normalize.css';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+*{
+    box-sizing: border-box;
+    font-family:  'Quicksand', sans-serif;
+}
+
+body{
+    font-size: 62.5%;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.products--grid{
+  app-img {
+    img {
+      border-radius: 10px;
+      max-height: 200px;
+    }
+  }
+}
